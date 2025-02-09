@@ -1,15 +1,33 @@
-import React from 'react'
-import Header from './Header'
-import { useSelector } from 'react-redux'
+import React from "react";
+import Header from "./Header";
+import { useSelector } from "react-redux";
+import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
+import MainContainer from "./MainContainer";
+import SecondaryContainer from "./SecondaryContainer";
 
 const Browse = () => {
-  const user = useSelector(store => store.user);
+  const user = useSelector((store) => store.user);
+
+
+  useNowPlayingMovies();
+
   return (
     <div>
       <Header />
-      <h1>{user.displayName ? user.displayName: "Guest"}</h1>
-    </div>
-  )
-}
+      <MainContainer />
+      <SecondaryContainer />
+      {/* 
+        Main Container
+         - VIdeo bg 
+         - Video title
+        Secondary Container
+         - movie list * n
+         - movie cards * n
 
-export default Browse
+
+      */}
+    </div>
+  );
+};
+
+export default Browse;
