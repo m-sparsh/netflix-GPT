@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+html, body {
+  overflow-x: hidden;  /* Prevent horizontal scrolling */
+  overflow-y: auto;    /* Allow vertical scrolling if needed */
+}

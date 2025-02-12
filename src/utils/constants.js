@@ -12,3 +12,5 @@ export const BG_IMG =
         "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5OTdmNWY5MWUyNjU1YzUxODBlY2ZkNjhjMDJmZTI3MyIsIm5iZiI6MTczODkzMzkzNS40MjgsInN1YiI6IjY3YTYwNmFmMGNhNmJmYTgwNDJmYmM3YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.qnB8s8raZEw7oeLkp1o3DHknWGD4RNhQewbUrOS8O00",
     },
   };
+
+  export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w342/"
