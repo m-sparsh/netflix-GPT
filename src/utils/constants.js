@@ -14,3 +14,9 @@ export const BG_IMG =
   };
 
   export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w342/"
+
+  export const SUPPORTED_LANGUAGES = [
+    {identifier: "en", name: "English"},
+    {identifier: "hindi", name: "Hindi"},
+    {identifier: "spanish", name: "Spanish"},
+  ]

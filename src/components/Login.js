@@ -67,7 +67,6 @@ const Login = () => {
               setErrorMessage(error.code + "-" + error.message);
               // ...
             });
-          console.log(user);
           // ...
         })
         .catch((error) => {

@@ -7,10 +7,10 @@ import SecondaryContainer from "./SecondaryContainer";
 import usePopularMovies from "../hooks/usePopularMovies";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
 import useUpcomingMovies from "../hooks/useUpcomingMovies";
+import GptSearch from "./GptSearch";
 
 const Browse = () => {
-  const user = useSelector((store) => store.user);
-
+  const showGPTSearch = useSelector((store)=> store.gpt.showGPTSearch);
 
   useNowPlayingMovies();
   usePopularMovies();
@@ -20,8 +20,15 @@ const Browse = () => {
   return (
     <div>
       <Header />
-      <MainContainer />
-      <SecondaryContainer />
+      {showGPTSearch ? (
+        <GptSearch />
+      ) : (
+        <>
+          <MainContainer />
+          <SecondaryContainer />
+        </>
+      )}
+
       {/* 
         Main Container
          - VIdeo bg 
